@@ -1,0 +1,40 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+  <!--Com.Sina.Weibo.Sdk.Component.IBrowserRequestCallBack-->
+  
+  
+  <attr path="/api/package[@name='com.sina.weibo.sdk.component']/interface[@name='BrowserRequestCallBack']"
+    name="visibility">public</attr>
+  <attr path="/api/package[@name='com.sina.weibo.sdk.api.share']/interface[@name='IVersionCheckHandler']"
+    name="visibility">public</attr>
+
+  <attr path="/api/package[@name='com.sina.weibo.sdk.component']/class[@name='BrowserRequestParamBase']/method[@name='onCreateRequestParamBundle']"
+    name="visibility">public</attr>
+  <attr path="/api/package[@name='com.sina.weibo.sdk.component']/class[@name='BrowserLauncher']"
+    name="visibility">public</attr>
+
+  <attr path="/api/package[@name='com.sina.weibo.sdk.register.mobile']/
+    class[@name='Country']/
+    method[@name='compareTo' and count(parameter)=1 and
+    parameter[1][@type='com.sina.weibo.sdk.register.mobile.Country']]/
+    parameter[1]" name="managedType">Java.Lang.Object</attr>
+  
+
+  <add-node path="/api/package[@name='com.sina.weibo.sdk.net']">
+    <class abstract="false" deprecated="not deprecated" extends="android.os.AsyncTask"  final="false" name="AsyncWeiboRunner.RequestRunner" static="true" visibility="public">
+
+      <method abstract="false" deprecated="not deprecated" final="false" name="doInBackground" native="false" return="Java.Lang.Object" static="false" synchronized="false" visibility="protected">
+        <parameter name="params" type="java.lang.Object...">
+        </parameter>
+      </method>
+    </class>
+  </add-node>
+  
+</metadata>
